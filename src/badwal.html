@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Badwal Architect — Designing Dreams into Reality. Premium architecture and interior design firm.">
+<title>Badwal Architect — Designing Dreams into Reality</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-logo">Badwal <span>Architect</span></div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-count" id="loaderCount">0%</div>
+</div>
+
+<!-- Back to top -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- ═══════ NAVBAR ═══════ -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Badwal <span>·</span> Architect</a>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-btn" id="themeToggle" title="Toggle theme">☀️</button>
+    <a href="#contact" class="nav-cta">Get In Touch</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#projects" onclick="closeMobile()">Projects</a>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#testimonials" onclick="closeMobile()">Testimonials</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ═══════ HERO ═══════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Est. 2008 &nbsp;·&nbsp; Award-Winning Studio</div>
+    <h1 class="hero-title">Designing <em>Dreams</em><br>into Reality</h1>
+    <p class="hero-subtitle">Badwal Architect — Where Vision Meets Craft</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary"><span>View Projects</span></a>
+      <a href="#contact" class="btn-outline">Start a Project</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span class="hero-scroll-text">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+  <div class="hero-stat-bar">
+    <div class="hero-stat" style="--d:0s"><div class="stat-num">250+</div><div class="stat-label">Projects Completed</div></div>
+    <div class="hero-stat" style="--d:0.1s"><div class="stat-num">15+</div><div class="stat-label">Years Experience</div></div>
+    <div class="hero-stat" style="--d:0.2s"><div class="stat-num">40+</div><div class="stat-label">Awards Won</div></div>
+    <div class="hero-stat" style="--d:0.3s"><div class="stat-num">98%</div><div class="stat-label">Client Satisfaction</div></div>
+  </div>
+</section>
+
+<!-- ═══════ BEFORE/AFTER ═══════ -->
+<section id="compare">
+  <div class="compare-wrap">
+    <div class="reveal-left">
+      <div class="compare-slider-container" id="compareContainer">
+        <div class="compare-img before"></div>
+        <div class="compare-img after" id="compareAfter"></div>
+        <div class="compare-label before">Before</div>
+        <div class="compare-label after">After</div>
+        <div class="compare-handle" id="compareHandle">
+          <div class="compare-handle-btn">⟺</div>
+        </div>
+      </div>
+      <p style="font-size:11px;color:var(--text3);text-align:center;margin-top:16px;letter-spacing:0.2em;">DRAG TO COMPARE</p>
+    </div>
+    <div class="compare-info reveal-right">
+      <div class="section-eyebrow">Transformation</div>
+      <h2 class="section-title">The <em>Badwal</em><br>Difference</h2>
+      <p class="section-sub" style="margin-bottom:40px;">We transform ordinary spaces into extraordinary experiences. Every project is a journey from concept to creation, driven by precision and passion.</p>
+      <div class="compare-feature">
+        <div class="feature-icon">✦</div>
+        <div><div class="feature-title">Concept to Completion</div><div class="feature-desc">Full-service architecture from initial design to final handover</div></div>
+      </div>
+      <div class="compare-feature">
+        <div class="feature-icon">◈</div>
+        <div><div class="feature-title">Premium Materials</div><div class="feature-desc">We source only the finest materials from trusted global suppliers</div></div>
+      </div>
+      <div class="compare-feature">
+        <div class="feature-icon">◇</div>
+        <div><div class="feature-title">On-Time Delivery</div><div class="feature-desc">Disciplined project management ensuring your timeline is respected</div></div>
+      </div>
+      <div class="compare-feature">
+        <div class="feature-icon">◎</div>
+        <div><div class="feature-title">Sustainable Design</div><div class="feature-desc">Eco-conscious approach integrated into every design decision</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PROJECTS ═══════ -->
+<section id="projects">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:40px;">
+    <div>
+      <div class="section-eyebrow reveal">Our Work</div>
+      <h2 class="section-title reveal">Selected <em>Projects</em></h2>
+    </div>
+    <div class="project-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Interior">Interior</button>
+      <button class="filter-btn" data-filter="Exterior">Exterior</button>
+      <button class="filter-btn" data-filter="Commercial">Commercial</button>
+      <button class="filter-btn" data-filter="Residential">Residential</button>
+    </div>
+  </div>
+  <div class="projects-grid reveal" id="projectsGrid">
+    <div class="project-card" data-cat="Residential">
+      <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80')"></div>
+      <div class="project-overlay">
+        <div class="project-cat">Residential</div>
+        <h3 class="project-name">The Serene Villa, Chandigarh</h3>
+        <span class="project-link">View Project →</span>
+      </div>
+      <div class="project-num">01</div>
+    </div>
+    <div class="project-card" data-cat="Interior">
+      <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80')"></div>
+      <div class="project-overlay">
+        <div class="project-cat">Interior</div>
+        <h3 class="project-name">Luxury Penthouse Suite</h3>
+        <span class="project-link">View Project →</span>
+      </div>
+      <div class="project-num">02</div>
+    </div>
+    <div class="project-card" data-cat="Commercial">
+      <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80')"></div>
+      <div class="project-overlay">
+        <div class="project-cat">Commercial</div>
+        <h3 class="project-name">The Grand Tower</h3>
+        <span class="project-link">View Project →</span>
+      </div>
+      <div class="project-num">03</div>
+    </div>
+    <div class="project-card" data-cat="Interior">
+      <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80')"></div>
+      <div class="project-overlay">
+        <div class="project-cat">Interior</div>
+        <h3 class="project-name">Minimalist Kitchen Design</h3>
+        <span class="project-link">View Project →</span>
+      </div>
+      <div class="project-num">04</div>
+    </div>
+    <div class="project-card" data-cat="Exterior">
+      <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&q=80')"></div>
+      <div class="project-overlay">
+        <div class="project-cat">Exterior</div>
+        <h3 class="project-name">Modern Facade Renewal</h3>
+        <span class="project-link">View Project →</span>
+      </div>
+      <div class="project-num">05</div>
+    </div>
+    <div class="project-card" data-cat="Residential">
+      <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80')"></div>
+      <div class="project-overlay">
+        <div class="project-cat">Residential</div>
+        <h3 class="project-name">Hillside Family Home</h3>
+        <span class="project-link">View Project →</span>
+      </div>
+      <div class="project-num">06</div>
+    </div>
+    <div class="project-card" data-cat="Commercial">
+      <div class="project-img" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80')"></div>
+      <div class="project-overlay">
+        <div class="project-cat">Commercial</div>
+        <h3 class="project-name">Corporate Campus, Mohali</h3>
+        <span class="project-link">View Project →</span>
+      </div>
+      <div class="project-num">07</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ ABOUT ═══════ -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal-left">
+      <div class="about-img-frame"></div>
+      <div class="about-img"><img src="WhatsApp Image 2026-05-10 at 6.28.24 PM.jpeg" alt=""></div>
+      <div class="about-img-badge">
+        <div class="badge-num">15</div>
+        <div class="badge-text">Years</div>
+      </div>
+    </div>
+    <div class="about-text reveal-right">
+      <div class="section-eyebrow">About Us</div>
+      <h2 class="section-title">The Mind Behind <em>Badwal</em> Architect</h2>
+      <div class="gold-line"></div>
+      <p>Badwal Architect is a premier architecture and design studio founded on the belief that every space has the potential to be extraordinary. With over 15 years of crafting environments that blend aesthetics with functionality, we've become the trusted name for discerning clients across North India.</p>
+      <p>Our approach is deeply rooted in understanding people — how they live, work, and aspire. We don't simply design buildings; we create experiences that resonate for generations.</p>
+      <div class="about-philosophy">
+        <p>"Architecture is not just about shelter. It is about shaping the human experience — every corner, every light, every proportion tells a story."</p>
+      </div>
+      <p>From intimate residential retreats to landmark commercial complexes, each Badwal project is a testament to meticulous craftsmanship and timeless design philosophy.</p>
+      <div class="about-stats">
+        <div class="about-stat"><div class="about-stat-num">250+</div><div class="about-stat-label">Projects</div></div>
+        <div class="about-stat"><div class="about-stat-num">40+</div><div class="about-stat-label">Awards</div></div>
+        <div class="about-stat"><div class="about-stat-num">15+</div><div class="about-stat-label">Years</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ SERVICES ═══════ -->
+<section id="services">
+  <div style="max-width:600px;" class="reveal">
+    <div class="section-eyebrow">What We Do</div>
+    <h2 class="section-title">Our <em>Services</em></h2>
+    <p class="section-sub">Comprehensive design solutions tailored to your vision, delivered with uncompromising attention to detail.</p>
+  </div>
+  <div class="services-grid reveal">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div class="service-icon">🏛</div>
+      <h3 class="service-title">Architecture Design</h3>
+      <p class="service-desc">From conceptual sketches to construction documentation. We design buildings that are structurally sound, aesthetically refined, and tailored to your lifestyle.</p>
+      <span class="service-arrow">Learn More →</span>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-icon">🪑</div>
+      <h3 class="service-title">Interior Design</h3>
+      <p class="service-desc">Curated interiors that reflect your personality. We select every material, texture, and fixture with precision to create cohesive, luxurious spaces.</p>
+      <span class="service-arrow">Learn More →</span>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-icon">🎨</div>
+      <h3 class="service-title">3D Visualization</h3>
+      <p class="service-desc">Photorealistic renders and immersive walkthroughs that let you experience your space before a single brick is laid. See your dream before it's built.</p>
+      <span class="service-arrow">Learn More →</span>
+    </div>
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <div class="service-icon">🔨</div>
+      <h3 class="service-title">Renovation Planning</h3>
+      <p class="service-desc">Breathing new life into existing spaces. We assess, plan, and execute renovations that honor the original structure while elevating every detail.</p>
+      <span class="service-arrow">Learn More →</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ TESTIMONIALS ═══════ -->
+<section id="testimonials">
+  <div class="testimonials-inner">
+    <div class="testimonials-left">
+      <div class="section-eyebrow reveal">Testimonials</div>
+      <h2 class="section-title reveal">What Clients <em>Say</em></h2>
+      <p class="section-sub reveal" style="margin-bottom:40px;">Our work speaks through the words of those who live in it every day.</p>
+      <div class="testimonial-nav reveal">
+        <button class="t-nav-btn" id="tPrev">←</button>
+        <button class="t-nav-btn" id="tNext">→</button>
+      </div>
+      <div class="t-dots reveal" id="tDots" style="margin-top:20px;"></div>
+    </div>
+    <div class="testimonial-track-wrap reveal-right">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">Badwal Architect transformed our house into a home we couldn't have imagined. The attention to detail, the quality of materials, and the seamless process made every rupee worth it. Truly world-class.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80')"></div>
+            <div><div class="author-name">Rajesh Sharma</div><div class="author-loc">Chandigarh, Punjab</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">The 3D visualization alone was extraordinary — I knew exactly what my office would look like before construction began. The final result exceeded even those renderings. Exceptional team.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80')"></div>
+            <div><div class="author-name">Priya Mehta</div><div class="author-loc">Mohali, Punjab</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">We commissioned Badwal Architect for our commercial complex and the result is a landmark. They balanced aesthetic ambition with practical function beautifully. Delivered on time, on budget.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background-image:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80')"></div>
+            <div><div class="author-name">Harpreet Singh</div><div class="author-loc">Ludhiana, Punjab</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">Our villa renovation was handled with incredible care and professionalism. The team understood our vision and elevated it far beyond what we imagined. I recommend Badwal without reservation.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background-image:url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80')"></div>
+            <div><div class="author-name">Sunita Kapoor</div><div class="author-loc">Amritsar, Punjab</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ GALLERY ═══════ -->
+<section id="gallery">
+  <div class="gallery-header">
+    <div>
+      <div class="section-eyebrow reveal">Gallery</div>
+      <h2 class="section-title reveal">Project <em>Showcase</em></h2>
+    </div>
+  </div>
+  <div class="gallery-track-outer">
+    <div class="gallery-track" id="galleryTrack">
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80')"><div class="gallery-item-overlay"><div class="gallery-item-title">Modern Living Room</div></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80')"><div class="gallery-item-overlay"><div class="gallery-item-title">Luxury Bathroom</div></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&q=80')"><div class="gallery-item-overlay"><div class="gallery-item-title">Master Bedroom</div></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80')"><div class="gallery-item-overlay"><div class="gallery-item-title">Designer Kitchen</div></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80')"><div class="gallery-item-overlay"><div class="gallery-item-title">Poolside Villa</div></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80')"><div class="gallery-item-overlay"><div class="gallery-item-title">Corporate Office</div></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80')"><div class="gallery-item-overlay"><div class="gallery-item-title">Dining Space</div></div></div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&q=80')"><div class="gallery-item-overlay"><div class="gallery-item-title">Facade Design</div></div></div>
+    </div>
+  </div>
+  <div class="gallery-controls">
+    <button class="g-btn" id="gPrev">←</button>
+    <div class="gallery-progress"><div class="gallery-progress-fill" id="galleryFill" style="width:12.5%"></div></div>
+    <button class="g-btn" id="gNext">→</button>
+  </div>
+</section>
+
+<!-- ═══════ CONTACT ═══════ -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="reveal-left">
+      <div class="section-eyebrow">Get In Touch</div>
+      <h2 class="section-title">Start Your <em>Dream</em> Project</h2>
+      <div class="gold-line"></div>
+      <p class="section-sub" style="margin-bottom:48px;">Ready to transform your space? We'd love to hear about your vision. Let's create something extraordinary together.</p>
+     <div>
+      <div class="contact-info-item">
+        <div class="contact-icon">📍</div>
+        <div><div class="contact-info-title">Studio Address</div><div><a href="https://maps.app.goo.gl/Ahc4vAQbHX3HWR6z7" class="contact-info-val">Sham Chaurasi, Punjab 144105</div></div>
+      </div></div>
+      <div class="contact-info-item">
+        <div class="contact-icon">📞</div>
+        <div><div class="contact-info-title">Phone</div><div><a href="tel:9417294381" class="contact-info-val">+91 9417294381</a></div></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">✉</div>
+        <div><div class="contact-info-title">Email</div><div><a href="mailto:pbadwal320@gmail.com" class="contact-info-val">pbadwal320@gmail.com</a></div></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">🕐</div>
+        <div><div class="contact-info-title">Studio Hours</div><div class="contact-info-val">Mon – Sun, 9:00 AM – 7:00 PM</div></div>
+      </div>
+    </div>
+    </div>
+    <div class="reveal-right">
+
+  <form class="contact-form" id="contactForm">
+<input type="hidden" name="access_key" value="ebb24b6f-7800-4cf7-9ace-d2cc5139e32f">
+
+<div class="form-row">
+  <div class="form-group">
+    <input type="text" id="fname" name="name" placeholder=" " required />
+    <label class="form-label" for="fname">Full Name *</label>
+  </div>
+
+  <div class="form-group">
+    <input type="tel" id="fphone" name="phone" placeholder=" " required />
+    <label class="form-label" for="fphone">Phone Number *</label>
+  </div>
+</div>
+
+<div class="form-group">
+  <input type="email" id="femail" name="email" placeholder=" " required />
+  <label class="form-label" for="femail">Email Address *</label>
+</div>
+
+<div class="form-row">
+  <div class="form-group">
+    <select id="ftype" name="project_type">
+      <option value="" disabled selected>Project Type</option>
+      <option>Residential Design</option>
+      <option>Commercial Design</option>
+      <option>Interior Design</option>
+      <option>Renovation</option>
+      <option>3D Visualization</option>
+      <option>Consultation</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <select id="fbudget" name="budget">
+      <option value="" disabled selected>Budget Range</option>
+      <option>₹10L – ₹25L</option>
+      <option>₹25L – ₹50L</option>
+      <option>₹50L – ₹1Cr</option>
+      <option>₹1Cr – ₹5Cr</option>
+      <option>₹5Cr+</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+  <textarea
+    id="fmessage"
+    name="message"
+    placeholder="Tell us about your project, timeline, and any specific requirements..."
+  ></textarea>
+</div>
+
+<div class="form-submit">
+  <div>
+    <p class="submit-note">✓ &nbsp;Response within 24 hours</p>
+  </div>
+
+  <button type="submit" class="submit-btn" id="submitBtn">
+    Send Enquiry →
+  </button>
+</div>
+
+
+  </form>
+
+  <div class="form-success" id="formSuccess" style="display:none;">
+    <div class="success-icon">✦</div>
+    <h3 class="success-title">Thank You for Reaching Out</h3>
+    <p class="success-text">
+      Your enquiry has been received. Our team will review your project details
+      and get back to you within 24 hours. We look forward to creating something extraordinary with you.
+    </p>
+    <div class="gold-line gold-line-center" style="width:60px;margin:24px auto;"></div>
+    <p style="font-size:12px;color:var(--text3);letter-spacing:0.1em;">
+      — The Badwal Architect Team
+    </p>
+  </div>
+
+</div>
+
+
+        <!-- <div class="form-row">
+          <div class="form-group"><input type="text" id="fname" placeholder=" " required/><label class="form-label" for="fname">Full Name *</label></div>
+          <div class="form-group"><input type="tel" id="fphone" placeholder=" " required/><label class="form-label" for="fphone">Phone Number *</label></div>
+        </div>
+        <div class="form-group"><input type="email" id="femail" placeholder=" " required/><label class="form-label" for="femail">Email Address *</label></div>
+        <div class="form-row">
+          <div class="form-group">
+            <select id="ftype">
+              <option value="" disabled selected>Project Type</option>
+              <option>Residential Design</option>
+              <option>Commercial Design</option>
+              <option>Interior Design</option>
+              <option>Renovation</option>
+              <option>3D Visualization</option>
+              <option>Consultation</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select id="fbudget">
+              <option value="" disabled selected>Budget Range</option>
+              <option>₹10L – ₹25L</option>
+              <option>₹25L – ₹50L</option>
+              <option>₹50L – ₹1Cr</option>
+              <option>₹1Cr – ₹5Cr</option>
+              <option>₹5Cr+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><textarea id="fmessage" placeholder="Tell us about your project, timeline, and any specific requirements..."></textarea></div>
+        <div class="form-submit">
+          <div>
+            <p class="submit-note">✓ &nbsp;Response within 24 hours</p>
+          </div>
+          <button type="button" class="submit-btn" id="submitBtn" onclick="submitForm()">
+            Send Enquiry →
+          </button>
+        </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="nav-logo">Badwal <span style="color:var(--gold)">·</span> Architect</span>
+      <p>A premier architecture and interior design studio crafting timeless spaces across Punjab and beyond. Where vision meets craftsmanship.</p>
+      <div class="social-links">
+        <a class="social-link" href="#" title="Instagram">📷</a>
+        <a class="social-link" href="#" title="Facebook">f</a>
+        <a class="social-link" href="#" title="LinkedIn">in</a>
+        <a class="social-link" href="#" title="Pinterest">P</a>
+        <a class="social-link" href="#" title="YouTube">▶</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Architecture Design</a></li>
+        <li><a href="#services">Interior Design</a></li>
+        <li><a href="#services">3D Visualization</a></li>
+        <li><a href="#services">Renovation Planning</a></li>
+        <li><a href="#services">Landscape Design</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Careers</a></li>
+        <li><a href="#contact">Press</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><a href="mailto:studio@badwalarchitect.com">studio@badwalarchitect.com</a></li>
+        <li><a href="#">Sector 17, Chandigarh</a></li>
+        <li><a href="#">Mon–Sat, 9AM–7PM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Badwal Architect. All rights reserved.</p>
+    <p style="color:var(--gold);letter-spacing:0.3em;font-family:var(--font-display);font-size:13px;font-style:italic;">Designing Dreams into Reality</p>
+    <p>Privacy Policy &nbsp;·&nbsp; Terms of Use</p>
+  </div>
+</footer>
+<script src="index.js"></script>
+</body>
+</html>
