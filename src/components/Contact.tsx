@@ -67,8 +67,8 @@ export default function Contact() {
               {
                 icon: MapPin,
                 title: t("contact.address"),
-                lines: [COMPANY.address, "Punjab, India"],
-                link: `https://maps.app.goo.gl/F4n6DPytGuDXyzrx5=${encodeURIComponent(COMPANY.name + " " + COMPANY.address)}`,
+                lines: [COMPANY.address, "India"],
+              link: "https://www.google.com/maps/dir//KULDEEP+ARCHITECT,+Hariana,+Punjab+144208/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x391b039098822e79:0x567eab192359069c?sa=X&ved=1t:57443&ictx=111",
                 linkLabel: t("contact.directions"),
               },
               {
