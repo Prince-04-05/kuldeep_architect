@@ -44,12 +44,12 @@ export default function About() {
                   <Award className="text-ink-950" size={22} />
                 </div>
                 <div>
-                  <div className="font-serif font-bold text-2xl text-ink-900 dark:text-white">15+</div>
+                  <div className="font-serif font-bold text-2xl text-ink-900 dark:text-white">22+</div>
                   <div className="text-xs uppercase tracking-widest text-gold-500 font-medium">Years</div>
                 </div>
               </div>
               <div className="mt-3 text-xs text-ink-600 dark:text-ink-300">
-                Award-winning design excellence since 2009
+                Award-winning design excellence since 2004
               </div>
             </div>
             {/* Decorative frame */}

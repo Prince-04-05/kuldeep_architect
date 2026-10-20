@@ -13,17 +13,19 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Floating from "./components/Floating";
 
+
 export const COMPANY = {
   name: "Kuldeep Architect",
   phone: "098140 28383",
   phoneClean: "+919814028383",
-  address: "Hariana, Punjab 144208",
-  email: "studio@kuldeeparchitect.in",
+  address: "Hariana, Hoshiarpur, Punjab",
+  email: "kuldip.architect@gmail.com",
   rating: 4.8,
   years: 15,
   projects: 100,
   whatsapp: "919814028383",
 };
+
 
 type AppContextType = {
   lang: Lang;

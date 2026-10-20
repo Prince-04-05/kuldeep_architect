@@ -68,7 +68,7 @@ export default function Contact() {
                 icon: MapPin,
                 title: t("contact.address"),
                 lines: [COMPANY.address, "Punjab, India"],
-                link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(COMPANY.name + " " + COMPANY.address)}`,
+                link: `https://maps.app.goo.gl/F4n6DPytGuDXyzrx5=${encodeURIComponent(COMPANY.name + " " + COMPANY.address)}`,
                 linkLabel: t("contact.directions"),
               },
               {
@@ -145,7 +145,7 @@ export default function Contact() {
             <div className="relative rounded-2xl overflow-hidden border border-ink-100/60 dark:border-ink-700/40 shadow-xl aspect-[4/3] lg:aspect-auto lg:min-h-[500px]">
               <iframe
                 title="Kuldeep Architect Location"
-                src="https://www.google.com/maps?q=Hariana,+Punjab+144208&output=embed"
+              src="https://maps.google.com/maps?q=KULDEEP%20ARCHITECT%2C%20Hariana%2C%20Punjab%20144208&output=embed"
                 className="w-full h-full"
                 style={{ border: 0, filter: "grayscale(0.2) contrast(1.05)" }}
                 loading="lazy"
