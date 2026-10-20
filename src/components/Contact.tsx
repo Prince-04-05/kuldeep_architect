@@ -146,7 +146,7 @@ export default function Contact() {
               <iframe
                 title="Kuldeep Architect Location"
               src="https://maps.google.com/maps?q=KULDEEP%20ARCHITECT%2C%20Hariana%2C%20Punjab%20144208&output=embed"
-                className="w-full h-full"
+                className="w-full h-[500px] min-h-[500px]"
                 style={{ border: 0, filter: "grayscale(0.2) contrast(1.05)" }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
